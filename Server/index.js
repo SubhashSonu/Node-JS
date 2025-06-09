@@ -1,10 +1,21 @@
 const http = require("http");
 const fs = require("fs");
 const url = require("url");
+const express = require("express");
+
+const app = express();
 
 
-const myServer = http.createServer((req, res)=>{
-//  console.log("New Req Rec.");
+app.get('/',(req,res) =>{
+    return res.send("Hello from Home Page");
+});
+
+app.get("/about",(req,res) =>{
+    return res.send(`Hey, ${req.query.name} age is ${req.query.age}`);
+});
+
+function myHandler(req,res){
+   //  console.log("New Req Rec.");
 //  console.log(req);
 //  res.end("Hello From Server");
 
@@ -47,8 +58,10 @@ fs.appendFile("log.txt",log,(error, data)=>{
             break;
     }
 })
-});
+}
 
-myServer.listen(8000, ()=>{
+const myServer = http.createServer(myHandler);
+
+app.listen(8000, ()=>{
     console.log("Server Started")
 })
