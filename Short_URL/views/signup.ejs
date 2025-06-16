@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Signup</title>
     <style>
+
+      body{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      }
+
         form {
       display: flex;
       flex-direction: column;
@@ -14,6 +19,8 @@
       background-color: antiquewhite;
       margin:auto;
        padding: 16px;
+       border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
 
     input {
@@ -44,10 +51,10 @@
         <input type="text" name="name" />
 
         <label>Email:</label>
-        <input type="text" name="email" />
+        <input type="email" name="email" />
 
         <label>Password:</label>
-        <input type="text" name="password" />
+        <input type="password" name="password" />
 
         <button type="submit">Signup</button>
 
