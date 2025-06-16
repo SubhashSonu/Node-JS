@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f3f4f6;
+      padding: 20px;
+      color: #333;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: auto;
+      padding: 30px;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      color: #4f46e5;
+    }
+
+    .info {
+      margin-top: 20px;
+    }
+
+    a.logout {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 15px;
+      background-color: #ef4444;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+    a.logout:hover {
+      background-color: #dc2626;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Welcome!</h1>
+    <div class="info">
+   
+      <p>You are successfully logged in.</p>
+    </div>
+
+    <a href="/user/logout" class="logout">Logout</a>
+  </div>
+</body>
+</html>
