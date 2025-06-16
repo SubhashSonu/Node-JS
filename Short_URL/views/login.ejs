@@ -9,14 +9,18 @@
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
 
+     
+
     form {
       display: flex;
       flex-direction: column;
-      width: 300px;
+      max-width: 300px;
       gap: 10px;
       background-color: antiquewhite;
       margin:auto;
       padding: 16px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
 
     input {
@@ -38,7 +42,8 @@
     }
   </style>
 </head>
-<body>
+<body class="container">
+  <div>
   <h1>Login</h1>
   <form action="/user/login" method="post">
     <label>Email:</label>
@@ -49,5 +54,6 @@
 
     <button type="submit">Login</button>
   </form>
+  </div>
 </body>
 </html>
