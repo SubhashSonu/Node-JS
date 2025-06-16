@@ -30,7 +30,14 @@ async function handleUserLogin(req,res){
 
 }
 
+function handleUserLogout(req,res){
+    res.clearCookie("connect.sid"); // optional: clears session cookie
+    res.redirect("/login"); // go back to login page
+  };
+
+
 module.exports = {
     handleUserSignup,
     handleUserLogin,
+    handleUserLogout,
 }
